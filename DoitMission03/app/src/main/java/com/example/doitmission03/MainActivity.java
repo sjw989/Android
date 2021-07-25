@@ -1,10 +1,6 @@
 package com.example.doitmission03;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.res.Resources;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
