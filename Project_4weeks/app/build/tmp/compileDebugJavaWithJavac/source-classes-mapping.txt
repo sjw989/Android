@@ -1,4 +1,0 @@
-com/example/project_4weeks/MainActivity.java
- com.example.project_4weeks.MainActivity
-com/example/project_4weeks/BuildConfig.java
- com.example.project_4weeks.BuildConfig
