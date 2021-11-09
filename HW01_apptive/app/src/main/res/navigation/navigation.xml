@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/testFragment"
+    >
+
+    <fragment
+        android:id="@+id/testFragment"
+        android:label="test_fragment"
+        android:name="com.example.hw01_apptive.TestFragment">
+        <action
+            android:id="@+id/test_to_first"
+            app:destination="@id/firstFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.hw01_apptive.FirstFragment">
+
+    </fragment>
+
+
+
+
+
+</navigation>

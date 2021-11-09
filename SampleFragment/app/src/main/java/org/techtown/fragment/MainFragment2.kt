@@ -17,8 +17,9 @@ class MainFragment2 : Fragment() {
 
         val btn5 = view.findViewById<Button>(R.id.button5)
         btn5.setOnClickListener(View.OnClickListener {
-            val tv5 = view.findViewById<TextView>(R.id.textView5)
-            tv5.setText("abcd")
+            val ft = childFragmentManager.beginTransaction()
+            ft.replace(R.id.main_frag, MainFragment4()).commit()
+
         })
 
         return view
