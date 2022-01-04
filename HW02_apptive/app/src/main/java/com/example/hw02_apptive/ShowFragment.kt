@@ -21,10 +21,6 @@ class ShowFragment : Fragment() {
     lateinit var bind : FragShowBinding
     val myViewModel : com.example.hw02_apptive.ViewModel by activityViewModels()
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
         bind = DataBindingUtil.inflate(inflater, R.layout.frag_show, container, false)
@@ -35,23 +31,19 @@ class ShowFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view) // 네비게이션 컨트롤러 view로 부터 가져오기
         bind.user = myViewModel
-        /*
-        myViewModel.id.observe(viewLifecycleOwner, Observer {
-            bind.tvId.text = myViewModel.id.value.toString()
-            Log.e("update id", myViewModel.id.value.toString())
-        })
-        myViewModel.pw.observe(viewLifecycleOwner, Observer {
-            bind.tvPw.text = myViewModel.pw.value.toString()
-            Log.e("update pw", myViewModel.pw.value.toString())
-        })
-         */
         bind.btnGo.setOnClickListener() {
             findNavController().navigate(R.id.action_showFragment_to_lastFragment)
         }
 
+        /*
+         myViewModel.id.observe(viewLifecycleOwner, Observer {
+             bind.tvId.text = myViewModel.id.value.toString()
+             Log.e("update id", myViewModel.id.value.toString())
+         })
+         myViewModel.pw.observe(viewLifecycleOwner, Observer {
+             bind.tvPw.text = myViewModel.pw.value.toString()
+             Log.e("update pw", myViewModel.pw.value.toString())
+         })
+      */
     }
-
-
-
-
 }

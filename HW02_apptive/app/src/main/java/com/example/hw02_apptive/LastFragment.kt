@@ -30,7 +30,7 @@ class LastFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnChange.setOnClickListener(){
-            myViewModel.updateValue(binding.etvChange.text.toString()," ")
+            myViewModel.updateValue(binding.etvChange.text.toString(), "")
         }
 
     }

@@ -35,16 +35,9 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view) // 네비게이션 컨트롤러 view로 부터 가져오기
 
-
         binding.btnLogin.setOnClickListener(){
             myViewModel.updateValue(binding.etvID.text.toString(),binding.etvPW.text.toString())
             findNavController().navigate(R.id.action_startFragment_to_showFragment)
         }
-
-
-
-
-
     }
-
 }
