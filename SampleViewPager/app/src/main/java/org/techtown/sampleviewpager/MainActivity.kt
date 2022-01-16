@@ -10,12 +10,12 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
-    private var vpAdapter: FragmentStateAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        var vpAdapter: FragmentStateAdapter? = null
         vpAdapter = CustomPagerAdapter(this)
         viewpager.adapter = vpAdapter
 
@@ -28,7 +28,6 @@ class MainActivity : AppCompatActivity() {
         override fun getItemCount(): Int {
             return PAGENUMBER
         }
-
         override fun createFragment(position: Int): Fragment {
             return when(position){
                 0 -> TestFragment.newInstances(R.raw.img00, "page00")
