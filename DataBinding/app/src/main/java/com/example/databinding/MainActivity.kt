@@ -4,23 +4,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
 import com.example.databinding.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
+        val model : com.example.databinding.ViewModel by viewModels()
 
-        binding.user = ViewModel()
-
-        binding.btn.setOnClickListener{
-            binding.user?.update(binding.editName.text.toString(),
-                                binding.editAge.text.toString())
-            Log.e("myLog", binding.editName.text.toString())
-        }
+        val ft = supportFragmentManager.beginTransaction()
+        ft.replace(R.id.frag_test, TestFragment()).commit()
     }
 }
