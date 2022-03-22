@@ -8,5 +8,5 @@ import androidx.room.PrimaryKey
 data class History (
     @PrimaryKey val uid: Int?,
     @ColumnInfo(name="expression") val expression: String?,
-    @ColumnInfo(name="result")val result: String
+    @ColumnInfo(name="re_sult")val result: String
     )

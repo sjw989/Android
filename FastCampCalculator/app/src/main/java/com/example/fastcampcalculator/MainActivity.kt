@@ -17,6 +17,7 @@ import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.room.Room
+import com.example.fastcampcalculator.dao.HistoryDao
 import com.example.fastcampcalculator.model.History
 import java.lang.NumberFormatException
 import kotlin.system.exitProcess
@@ -68,7 +69,6 @@ class MainActivity : AppCompatActivity() {
             return
         }
         tv_expression.append(number)
-        Log.d("Mu : " , "asfasf")
         tv_result.text = calculateExpression()
     }
 
@@ -132,7 +132,6 @@ class MainActivity : AppCompatActivity() {
     fun historyClicked(view : View){
         historyLayout.isVisible = true
         historyLinearLayout.removeAllViews()
-
         Thread(Runnable {
             db.historyDao().getAll().reversed().forEach{
                 runOnUiThread{
@@ -144,6 +143,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }).start()
+
 
     }
     fun historyClearButtonClicked(view : View){
