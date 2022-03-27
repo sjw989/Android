@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "832750164222",
+    "firebase_url": "https://tinderdemo-bb08a-default-rtdb.firebaseio.com",
+    "project_id": "tinderdemo-bb08a",
+    "storage_bucket": "tinderdemo-bb08a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:832750164222:android:93679e7de18ee559b8adaf",
+        "android_client_info": {
+          "package_name": "com.example.tinderdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "832750164222-14i8nn28br7nmgpqnbv136pqh3p8ajbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfUJxMKMALya34yT7CnvAbds-KmGdObYg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "832750164222-14i8nn28br7nmgpqnbv136pqh3p8ajbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">TinderDemo</string>
+    <string name="facebook_app_id">1344331242753378</string>
+    <string name="fb_login_protocol_scheme">fb1344331242753378</string>
+    <string name="facebook_client_token">bc5a32d1d2ce5c76c8c8265c9acd99c2</string>
+</resources>

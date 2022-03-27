@@ -1,10 +1,10 @@
 package com.example.samplenotification
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
-import com.google.firebase.ktx.Firebase
 import com.google.firebase.messaging.FirebaseMessaging
 
 class MainActivity : AppCompatActivity() {
@@ -20,17 +20,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        initFireBase()
+        getToken()
         updateResult()
 
     }
-
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        setIntent(intent)
-        updateResult(true)
-    }
-    private fun initFireBase(){
+    
+    private fun getToken(){
         FirebaseMessaging.getInstance().token.addOnCompleteListener{
             if(it.isSuccessful){
                 tv_token.text = it.result
@@ -38,17 +33,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        updateResult(true)
+    }
+
+    @SuppressLint("SetTextI18n")
     private fun updateResult(isNewIntent : Boolean = false){
         tv_result.text = (intent.getStringExtra("notificationType") ?: "앱 런처") +
-        if (isNewIntent){
+        if (isNewIntent) {
             "(으)로 갱신했습니다."
-        }else{
+        }else {
             "(으)로 실행했습니다."
         }
-
-
-
-
     }
 
 

@@ -30,13 +30,10 @@ class TestFireBaseMessageService : FirebaseMessagingService() {
 
         type ?:  return
 
-
-
         NotificationManagerCompat.from(this)
             .notify(type.id ,createNotification(type, title,message))
-
-
     }
+
 
     private  fun createNotificationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
@@ -46,6 +43,11 @@ class TestFireBaseMessageService : FirebaseMessagingService() {
             (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
                 .createNotificationChannel(channel)
         }
+    }
+    companion object{
+        private  const val CHANNEL_NAME = "Emoji Party"
+        private const val CHANNEL_DESCRIPTION = "Emoji Party를 위한 채널"
+        private const val CHANNEL_ID = "Channel ID"
     }
 
 
@@ -72,24 +74,16 @@ class TestFireBaseMessageService : FirebaseMessagingService() {
             NotificationType.EXPANDABLE->{
                 notificationBuilder.setStyle(
                     NotificationCompat.BigTextStyle()
-                        .bigText("qwfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                        .bigText("qwffffffffffffffffffffffffffffff" +
+                                "ffffffffffffffffffffffffffffffffffffffffff" +
+                                "fffffffffffffffffffffffffffffffffffffff"
                         )
                 )
             }
             NotificationType.CUSTOM->{
-
             }
-
         }
-
-
-
         return notificationBuilder.build()
     }
 
-    companion object{
-        private  const val CHANNEL_NAME = "Emoji Party"
-        private const val CHANNEL_DESCRIPTION = "Emoji Party를 위한 채널"
-        private const val CHANNEL_ID = "Channel ID"
-    }
 }
