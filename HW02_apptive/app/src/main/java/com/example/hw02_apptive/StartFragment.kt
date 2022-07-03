@@ -1,6 +1,7 @@
 package com.example.hw02_apptive
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -37,6 +38,7 @@ class StartFragment : Fragment() {
 
         binding.btnLogin.setOnClickListener(){
             myViewModel.updateValue(binding.etvID.text.toString(),binding.etvPW.text.toString())
+            Log.d("view : ", myViewModel.id.value.toString())
             findNavController().navigate(R.id.action_startFragment_to_showFragment)
         }
     }

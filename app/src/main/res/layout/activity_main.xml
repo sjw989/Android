@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="35dp"
+        android:text="나와 맞는 것 같은 키워드를 체크해 주세요!"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="관심활동 분야"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:text="기획/아이디어"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button8"
+            app:layout_constraintEnd_toStartOf="@+id/button5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="광고/마케팅"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button4"
+            app:layout_constraintTop_toTopOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="영상/콘텐츠"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button7"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button5"
+            app:layout_constraintTop_toTopOf="@+id/button5" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="디자인"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button6"
+            app:layout_constraintTop_toTopOf="@+id/button6" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+
+            android:text="창업/스타트업"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button12"
+            app:layout_constraintEnd_toStartOf="@+id/button9"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="IT/SW"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button10"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintTop_toTopOf="@+id/button8" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="금융/경제"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button11"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button9"
+            app:layout_constraintTop_toTopOf="@+id/button9" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="문학/시나리오"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button10"
+            app:layout_constraintTop_toTopOf="@+id/button10" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+
+            android:text="교육"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button22"
+            app:layout_constraintEnd_toStartOf="@+id/button13"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button8" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="전략/기획"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button14"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button12"
+            app:layout_constraintTop_toTopOf="@+id/button12" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="국제마케팅"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button15"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button13"
+            app:layout_constraintTop_toTopOf="@+id/button13" />
+
+        <Button
+            android:id="@+id/button15"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="광고/홍보
+"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button14"
+            app:layout_constraintTop_toTopOf="@+id/button14" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+
+            android:text="마케팅"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button26"
+            app:layout_constraintEnd_toStartOf="@+id/button23"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button12" />
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="노무"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button25"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button23"
+            app:layout_constraintTop_toTopOf="@+id/button23" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="HR(인사)"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button24"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button22"
+            app:layout_constraintTop_toTopOf="@+id/button22" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="의료"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button24"
+            app:layout_constraintTop_toTopOf="@+id/button24" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="10dp"
+            android:text="법"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button30"
+            app:layout_constraintEnd_toStartOf="@+id/button27"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button22" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="무역/유통"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button28"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button26"
+            app:layout_constraintTop_toTopOf="@+id/button26" />
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="연구/개발"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button29"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button27"
+            app:layout_constraintTop_toTopOf="@+id/button27" />
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="IC/ICT"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button28"
+            app:layout_constraintTop_toTopOf="@+id/button28" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginTop="10dp"
+            android:text="스포츠"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toTopOf="@+id/button34"
+            app:layout_constraintEnd_toStartOf="@+id/button31"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button26" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="게임"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button32"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button30"
+            app:layout_constraintTop_toTopOf="@+id/button30" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="전자"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toStartOf="@+id/button33"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button31"
+            app:layout_constraintTop_toTopOf="@+id/button31" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+
+            android:layout_marginStart="10dp"
+            android:text="기계"
+            android:textSize="10sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button32"
+            app:layout_constraintTop_toTopOf="@+id/button32" />
+
+        <Button
+            android:id="@+id/button34"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+
+            android:text="기타"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/button30"
+            app:layout_constraintStart_toStartOf="@+id/button30"
+            app:layout_constraintTop_toBottomOf="@+id/button30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="관심 포지션"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <Button
+        android:id="@+id/button35"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+
+        android:text="기획자"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <Button
+        android:id="@+id/button36"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+
+        android:text="디자이너"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/button35"
+        app:layout_constraintTop_toTopOf="@+id/button35" />
+
+    <Button
+        android:id="@+id/button37"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+
+        android:text="개발자"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/button36"
+        app:layout_constraintTop_toTopOf="@+id/button36" />
+
+    <Button
+        android:id="@+id/button38"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+
+        android:text="마케터"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/button35"
+        app:layout_constraintTop_toBottomOf="@+id/button35" />
+
+    <Button
+        android:id="@+id/button39"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:text="서포터즈"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/button38"
+        app:layout_constraintTop_toTopOf="@+id/button38" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
